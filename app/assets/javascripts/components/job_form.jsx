@@ -17,19 +17,19 @@ var JobForm = React.createClass({
         <h2>Post a new job</h2>
           <form onSubmit={this.handleSubmit}>
             <input name='title' placeholder='Title'
-              value={this.props.input_title}
+              value={this.props.title}
               onChange={this.handleChange} />
             <input name='post_time' placeholder='Post Time'
-              value={this.props.input_post_time}
+              value={this.props.post_time}
               onChange={this.handleChange} />
             <input name='company' placeholder='Company'
-              value={this.props.input_company}
+              value={this.props.company}
               onChange={this.handleChange} />
             <input name='description' placeholder='Description'
-              value={this.props.input_description}
+              value={this.props.description}
               onChange={this.handleChange} />
             <input name='price' placeholder='Price $'
-              value={this.props.input_price}
+              value={this.props.price}
               onChange={this.handleChange} />
             <input type='submit' value='Post job' />
           </form>
