@@ -10,4 +10,4 @@ var JobsList = React.createClass({
       </div>
     )
   }
-})
+});

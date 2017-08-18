@@ -1,12 +1,12 @@
 var Job = React.createClass({
-  render: function() {
+  render: function(){
     return (
       <div>
         <h3>{this.props.job.title}</h3>
-        <p>{job.post_time}</p>
-        <p>{job.company}</p>
-        <p>{job.description}</p>
-        <p>{job.price}</p>
+        <p>{this.props.job.post_time}</p>
+        <p>{this.props.job.company}</p>
+        <p>{this.props.job.description}</p>
+        <p>{this.props.job.price}</p>
       </div>
     )
   }

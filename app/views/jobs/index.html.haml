@@ -2,15 +2,4 @@
 
 %h2 Jobs
 
-%h3 Post New Job
-
-= form_for @job, remote: true do |f|
-  = f.text_field :title, placeholder: 'Title'
-  = f.text_field :post_time, placeholder: 'Date and Time'
-  = f.text_field :company, placeholder: 'Company'
-  = f.text_field :description, placeholder: 'Description'
-  = f.text_field :price, placeholder: 'Price'
-  = f.submit 'Post New Job'
-
-#jobs
-  = render 'jobs'
+= react_component('Jobs', jobs: @jobs)
