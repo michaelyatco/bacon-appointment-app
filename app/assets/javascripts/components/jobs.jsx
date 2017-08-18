@@ -3,11 +3,7 @@ var Jobs = React.createClass({
     return (
       <div>
         <JobForm />
-        {this.props.jobs.map(function(job) {
-          return (
-            <Job job={job} />
-          )
-        })}
+        <JobsList jobs={this.props.jobs}/>
       </div>
     )
   }
