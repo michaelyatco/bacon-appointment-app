@@ -11,7 +11,19 @@ var JobForm = React.createClass({
     this.props.onFormSubmit();
   },
 
+  setJobTime: function(e) {
+    var name = 'post_time';
+    var obj = {};
+    if(obj[name] = e.toDate()) {
+      this.props.onUserInput(obj);
+    }
+  },
+
   render: function() {
+    var inputProps = {
+      name: 'post_time'
+    };
+
     return (
       <div>
         <h2>Post a new job</h2>
@@ -19,9 +31,11 @@ var JobForm = React.createClass({
             <input name='title' placeholder='Title'
               value={this.props.input_title}
               onChange={this.handleChange} />
-            <input name='post_time' placeholder='Post Time'
-              value={this.props.input_post_time}
-              onChange={this.handleChange} />
+
+            <Datetime input={false} open={true} inputProps={inputProps}
+              value={this.props.post_time}
+              onChange={this.setJobTime} />
+
             <input name='company' placeholder='Company'
               value={this.props.input_company}
               onChange={this.handleChange} />
@@ -31,7 +45,7 @@ var JobForm = React.createClass({
             <input name='price' placeholder='Price $'
               value={this.props.input_price}
               onChange={this.handleChange} />
-            <input type='submit' value='Post job' />
+            <input type='submit' value='Post job' className='submit-button' />
           </form>
       </div>
     )
