@@ -3,7 +3,7 @@ var Job = React.createClass({
     return (
       <div>
         <h3>{this.props.job.title}</h3>
-        <p>{this.props.job.post_time}</p>
+        <p>{formatDate(this.props.job.post_time)}</p>
         <p>{this.props.job.company}</p>
         <p>{this.props.job.description}</p>
         <p>{this.props.job.price}</p>
