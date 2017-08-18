@@ -6,7 +6,6 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-
     if @job.save
       render json: @job
     else
