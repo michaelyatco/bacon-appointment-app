@@ -5,8 +5,13 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.create(job_params)
-    @jobs = Job.order('post_time ASC')
+    @job = Job.new(job_params)
+
+    if @job.save
+      render json: @job
+    else
+      render json: @job.errors, status: :unprocessable_entity
+    end
   end
 
   private
