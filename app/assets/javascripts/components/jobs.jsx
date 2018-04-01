@@ -32,6 +32,11 @@ var Jobs = React.createClass({
     });
   },
 
+  updateJobs: function(job) {
+    var jobs = this.state.jobs.filter((i) => {return i.id != job.id });
+    jobs.push(job);
+  },
+
   render: function() {
     return (
       <div>
